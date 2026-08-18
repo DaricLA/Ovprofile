@@ -26,7 +26,7 @@ jobs:
 
     - name: Build EXE with PyInstaller
       run: |
-        pyinstaller --onefile --windowed --name "OvenProfileAnalyzer" oven_profile_analyzer.py
+        pyinstaller --onefile --windowed --name "OvenProfileAnalyzer" --collect-all ttkbootstrap oven_profile_analyzer.py
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
